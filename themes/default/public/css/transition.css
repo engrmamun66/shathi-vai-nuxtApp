@@ -1,0 +1,35 @@
+/* -------------------------------------------------------------------------- */
+/*                           Transition For All Layouts                       */
+/* -------------------------------------------------------------------------- */
+.layout-enter-active,
+.layout-leave-active {
+    transition: all 0.4s;
+}
+
+.layout-enter-from,
+.layout-leave-to {
+    filter: grayscale(1);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           Transition For All Pages                          */
+/* -------------------------------------------------------------------------- */
+/* Page Out */
+.page-leave-active {
+    transition: all 0.5s;
+}
+.page-leave-to {
+    opacity: 0;
+    filter: blur(.05rem);
+    /* transform: translateY(5rem); */
+}
+
+/* Page IN */
+.page-enter-active{
+    transition: all 0.5s;
+}
+.page-enter-from {
+    opacity: 0;
+    /* filter: blur(.2rem); */
+    /* transform: translateY(-5rem); */
+}

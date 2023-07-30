@@ -1,0 +1,151 @@
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+*:not(i) {
+    font-family: var(--fontfamily-primary);
+}
+/*======================= 
+Global custom class css
+==========================*/
+.circle-image {
+    border-radius: 50%;
+    clip-path: circle(50% at center);
+}
+select {
+    appearance: none;
+    background-image: url('/img/down-arrow.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    /* background-color: yellow; */
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+.scrollbar-style-1{
+    overflow-y: scroll;
+}
+.scrollbar-style-1::-webkit-scrollbar {
+    width: 2px;
+}
+/* Track */
+.scrollbar-style-1::-webkit-scrollbar-track {
+    background:#b3b3b3;
+}
+/* Handle */
+.scrollbar-style-1::-webkit-scrollbar-thumb {
+    background: #808080;
+}
+/* Handle on hover */
+.scrollbar-style-1::-webkit-scrollbar-thumb:hover {
+    background: #14141d;
+}
+
+hr {
+    background-color: #fff;
+    padding: 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.75));
+}
+@media only screen and (max-width: 700px) {
+    .hide-sm {
+        display: none;
+    }
+}
+.size-05 {
+    font-size: 0.5rem !important;
+}
+.size-06 {
+    font-size: 0.6rem !important;
+}
+.size-07 {
+    font-size: 0.7rem !important;
+}
+.size-08 {
+    font-size: 0.8rem !important;
+}
+.size-09 {
+    font-size: 0.9rem !important;
+}
+.size-1 {
+    font-size: 1rem !important;
+}
+.size-2 {
+    font-size: 1.2rem !important;
+}
+.size-3 {
+    font-size: 1.3rem !important;
+}
+.size-sm {
+    font-size: 1.4rem !important;
+}
+.w-auto {
+  width : auto !important;
+}
+.radius-0 {
+    border-radius: 0px !important;
+}
+.radius-3 {
+    border-radius: 3px;
+}
+.radius-4 {
+    border-radius: 4px;
+}
+.radius-5 {
+    border-radius: 5px;
+}
+.radius-50 {
+    border-radius: 50%;
+}
+.cp{
+    cursor: pointer !important;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.border{
+    border: 1px solid #cdcdcd17 !important;
+}
+.no-radius-right{
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.no-radius-left{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+.position-relative{
+    position: relative !important;
+}
+.position-absolute{
+    position: absolute !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Top Nav                                  */
+/* -------------------------------------------------------------------------- */
+
+
+

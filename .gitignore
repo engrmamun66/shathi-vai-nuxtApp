@@ -1,0 +1,22 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+.env.dev
+dist
+.vscode/settings.json
+# Dynamic Build Directories
+.prod
+.dev
+
+# ignoring folder for converting android app
+db.json
+android
+ios
+.idea
+# With Chat
+chat/server/node_modules
+chat/server/.env
