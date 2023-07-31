@@ -18,5 +18,5 @@ android
 ios
 .idea
 # With Chat
-chat/server/node_modules
+api-server/node_modules
 chat/server/.env

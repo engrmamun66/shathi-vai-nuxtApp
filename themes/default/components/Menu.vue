@@ -149,7 +149,7 @@ video {
   width: 100%;
   height: 4rem;
   margin: 0 auto;
-  background-color: #e7e7e7c2;
+  background-color: #e7e7e7;
 }
 
 .menu {
@@ -164,6 +164,8 @@ video {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   background: var(--color-white); 
+  background-color: white;
+  z-index: 999;
 }
 .menu-list {
   display: flex;

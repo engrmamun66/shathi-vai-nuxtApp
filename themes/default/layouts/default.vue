@@ -5,7 +5,7 @@
       </div>
       <div v-else class="container">
         <Menu />
-        <div style="margin-top:4rem">
+        <div style="margin:4rem 0px">
           <slot />
         </div>
       </div>

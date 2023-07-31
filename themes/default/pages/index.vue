@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr v-for="x in 100" :key="x + 1">
           <td>
             <ul>
               <li>Abdullah</li>
@@ -25,8 +25,9 @@
           </td>
           <td>
             <ul>
-              <li class="text-center"><i class="las la-edit p-2 fs-5"></i></li>
-              <li class="text-center"><i class="las la-phone-alt p-2 fs-5"></i></li>
+              <li class="text-center"><i class="las la-share p-1"></i></li>
+              <li class="text-center"><i class="las la-phone-alt p-1 fs-5"></i></li>
+              <li class="text-center"><i class="las la-edit p-1 fs-5"></i></li>
             </ul>
           </td>
         </tr>        
