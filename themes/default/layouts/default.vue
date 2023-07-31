@@ -3,7 +3,7 @@
       <div v-if="useRoute().path=='/login' || useRoute().path=='/register'">
         <slot />
       </div>
-      <div v-else>
+      <div v-else class="container">
         <Menu />
         <div style="margin-top:4rem">
           <slot />

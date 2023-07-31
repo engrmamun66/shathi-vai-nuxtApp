@@ -2,7 +2,7 @@
   <div class="position-relative">
 
     <header class="header" id="header">
-      <nav class="navbar container">
+      <nav class="navbar menu-container">
         <div class="d-flex justify-content-start align-items-center">
         <img src="/img/logo.png" class="me-3" width="50" />
         <nuxt-link to="/" class="brand">
@@ -32,15 +32,21 @@
               </a>
             </li>
             <li class="menu-item">
+              <a href="#" class="menu-link is-active">
+                <i class="menu-icon ion-md-home"></i>
+                <span class="menu-name">Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
               <a href="#" class="menu-link">
                 <i class="menu-icon ion-md-search"></i>
                 <span class="menu-name">Search</span>
               </a>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link is-active">
-                <i class="menu-icon ion-md-home"></i>
-                <span class="menu-name">Home</span>
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-menu"></i>
+                <span class="menu-name">Menu</span>
               </a>
             </li>
           </ul>
@@ -110,7 +116,7 @@ video {
      object-fit: cover;
 }
 
-.container {
+.menu-container {
   max-width: 75rem;
   height: auto;
   margin: 0 auto;
@@ -157,9 +163,7 @@ video {
   padding: 0 1rem;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  background: var(--color-white);
-  box-shadow: 0px -3px 6px #a2a2a233;
-  border-top: 1px solid #c8c8c8;
+  background: var(--color-white); 
 }
 .menu-list {
   display: flex;
@@ -195,6 +199,12 @@ video {
   text-transform: capitalize;
 }
 
+@media only screen and (max-width: 700px) {
+  .menu{
+    box-shadow: 0px -3px 6px #a2a2a233;
+    border-top: 1px solid #c8c8c8;
+  }
+}
 @media only screen and (min-width: 360px) {
   .menu-name {
     display: block;
@@ -222,7 +232,7 @@ video {
     width: auto;
     height: auto;
     background: none;
-    box-shadow: none;
+    box-shadow: none;    
   }
   .menu-link.is-active::before {
     position: absolute;
