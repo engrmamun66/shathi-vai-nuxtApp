@@ -1,95 +1,49 @@
 <template>
   <div class="position-relative">
 
-      <div ref="all_menus" class="menu-fixed">
-        <nav class="navbar mobile-menu-toggler hide-min-992px">
-          <div class="container">
-            <img src="/img/logo.png" class="navbar-brand" style="width:40px" />
-            <div class="d-flex">
-              <button class="navbar-toggler me-2" type="button" >
-                <i class="las la-language size-1-5"></i>
-              </button>
-              <button @click="show1=!show1" class="navbar-toggler" type="button">
-                <i class="las la-bars size-1-5"></i>
-              </button>
-            
-            </div>
-          </div>
-        </nav>
-        <!-- Start Topbar -->    
-        <section id="top-nav">
-            <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Help</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="las la-rss-square"></i> News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Press</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Career</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Certificates</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Languages</a>
-              </li>
-            </ul>
-        </section>
-
-        <!-- Main Menu -->
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            <img src="/img/logo.png" class="navbar-brand hide-max-991px" style="width:40px"/>
-            <button class="navbar-toggler hide-max-991px" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" :class="{'d-block': show1}">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Solution"></span>Solution</a>
-                </li>          
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Sentors"></span>Sentors</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Cybersecurity"></span>Cybersecurity</a>
-                </li>          
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Industry"></span>Industry</a>
-                </li>          
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Automotive"></span>Automotive</a>
-                </li>       
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Audit Certificate"></span>Audit Certificate</a>
-                </li>          
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Construction & Real Estate"></span>Construction & Real Estate</a>
-                </li>          
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="Training"></span>Training</a>
-                </li>          
-                <li class="nav-item">
-                  <a class="nav-link"><span data-hover="About Us"></span>About Us</a>
-                </li>          
-              </ul>
-            </div>
-          </div>
-        </nav>
-      
-      </div>
+    <header class="header" id="header">
+      <nav class="navbar container">
+        <a href="./index.html" class="brand">Brand</a>
+        <div class="menu" id="menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="#" class="menu-link is-active">
+                <i class="menu-icon ion-md-home"></i>
+                <span class="menu-name">Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-search"></i>
+                <span class="menu-name">Search</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-cart"></i>
+                <span class="menu-name">Cart</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-heart"></i>
+                <span class="menu-name">Favorite</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-contact"></i>
+                <span class="menu-name">Account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
 
 
 
-    <div class="mt-4">
-      <Slider></Slider>
-      <!-- <MyCanvas use="robot_dance"></MyCanvas> -->
-    </div>
       
   
 </div>
@@ -106,128 +60,230 @@ useHead({
   titleTemplate: '%s | Home',
 });
 
-let show1 = ref(false)
-let all_menus = ref(null) 
+onMounted(() => {
+  setTimeout(()=>{
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuLinks.forEach((link) => {
+          link.classList.remove("is-active");
+        });
+        link.classList.add("is-active");
+      });
+    });
+
+
+  },1000)
+})
 
 
 </script>
 <style scoped>
-#top-nav {
-    background-color: var(--color-blue-dark);
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-#top-nav .nav-item a{
-  padding: 5px 10px;
-}
-#top-nav .nav-item a,
-#top-nav .nav-item i
-{
-    color: #ececec;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 13px;
-    cursor: pointer;
-}
-/* ------ Main Menu(nav) CSS ----- */
-.navbar
-{
-    font-size: 14px;
-    font-weight: 600;
-    background-color: transparent;
-}
-.navbar .navbar-toggler
-{
-    border: 1px solid var(--color-yellow);
-}
-.navbar .navbar-toggler i
-{
-    color: var(--color-yellow);
-}
-.navbar.mobile-menu-toggler{
-  background-color: var(--color-blue-dark);
+:root {
+  --color-black: hsl(0, 0%, 10%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-darken: hsl(0, 0%, 20%);
+  --color-teal-100: hsl(160, 85%, 87%);
+  --color-teal-200: hsl(162, 78%, 77%);
+  --color-teal-300: hsl(162, 72%, 65%);
+  --color-teal-400: hsl(162, 68%, 54%);
+  --color-teal-500: hsl(162, 73%, 46%);
+  --color-teal-600: hsl(162, 82%, 40%);
+  --color-teal-700: hsl(162, 87%, 35%);
+  --color-teal-800: hsl(162, 88%, 30%);
+  --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 -4px 6px -1px rgba(0, 0, 0, 0.1),
+  	0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  	0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* ------ Menu position fixing ----- */
-.menu-fixed {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 2222;
-    background-color: #030c2714;
-    width: 100%;
-    backdrop-filter: blur(1px);
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
+html {
+  font-size: 100%;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
 
-/* ------ Start nav item Animation ----- */
-.navbar .nav-item a{
-  position: relative;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
   cursor: pointer;
-  color: var(--color-blue-dark);
-  color: white;
-  text-shadow: 1px 1px 0px #111;
-}
-.navbar .nav-item a:hover{
-  text-shadow: 1px 1px 0px #11111100;
-}
-.navbar .nav-item a span::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: white;
-	color: var(--color-yellow);
-  border-top: 1px dashed var(--color-yellow);
-  border-bottom: 2px solid var(--color-yellow);
-  border-radius: 0px;
-  padding-top: 8px;
-	content: attr(data-hover);
-	-webkit-transform: rotateX(270deg);
-	-moz-transform: rotateX(270deg);
-	transform: rotateX(270deg);
-	-webkit-transition: -webkit-transform 0.6s;
-	-moz-transition: -moz-transform 0.6s;
-	transition: transform 0.6s;
-	-webkit-transform-origin: 0 0;
-	-moz-transform-origin: 0 0;
-	transform-origin: 0 0;
-	pointer-events: none;
-  text-align: center;
-  align-content: center;  
-}
-.navbar .nav-item a:hover span,
-.navbar .nav-item a:focus span {
-	background: #2f4351;
-}
-.navbar .nav-item a:hover span::before,
-.navbar .nav-item a:focus span::before {
-	-webkit-transform: rotateX(10deg);	
-	-moz-transform: rotateX(10deg);
-	transform: rotateX(10deg);
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
 }
 
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
+.container {
+  max-width: 75rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
 
+.brand {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-teal-800);
+  text-transform: uppercase;
+}
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+}
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  margin: 0 auto;
+}
 
-/* ----------------------------------------------------- */
-/*                 Hide Controll                         */
-/* ----------------------------------------------------- */
-@media screen and (max-width: 991px) {
-  .hide-max-991px{
-      display: none !important;
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  background: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: var(--color-black);
+}
+.menu-link.is-active {
+  position: relative;
+  color: var(--color-teal-800);
+  transition: all 0.35s ease;
+}
+.menu-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: inherit;
+}
+.menu-name {
+  display: none;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  visibility: hidden;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 360px) {
+  .menu-name {
+    display: block;
+    visibility: visible;
   }
 }
-@media screen and (min-width: 992px) {
-  .hide-min-992px{
-      display: none !important;
+@media only screen and (min-width: 576px) {
+  .menu-list {
+    justify-content: center;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    background: var(--color-white);
+    box-shadow: var(--shadow-medium);
+    transition: all 0.35s ease-in-out;
+  }
+
+  .menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+  }
+  .menu-link.is-active::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2px;
+    border: none;
+    outline: none;
+    background: var(--color-teal-800);
+  }
+  .menu-link:hover {
+    color: var(--color-teal-800);
+    transition: all 0.35s ease;
+  }
+  .menu-icon {
+    display: none;
+    visibility: hidden;
+  }
+  .menu-name {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0.2rem;
   }
 }
 </style>

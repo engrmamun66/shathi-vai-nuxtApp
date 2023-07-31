@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "nuxt dev",
-    "dev": "nuxt dev",
+    "start": "nuxt dev --port 3005",
+    "dev": "nuxt dev --port 3005",
     "dev-test": "nuxt dev --dotenv .env.dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

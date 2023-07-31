@@ -81,12 +81,12 @@ function authMethods(functionName = '', ...args) {
         logoutIfExpireToken(){
             if(useCookie('tokenExpire').value <= (new Date().getTime() / 1000) || useCookie('tokenExpire').value == undefined){
                 authMethods().resetCookies()
-                if(useRoute().path != '/login'){
-                    navigateTo('/login?' + (
-                        encodeURI(useRoute().path != '/' ?
-                            ('redirect_to=' + encodeURI(useRoute().fullPath)) : ''))
-                    )
-                }
+                // if(useRoute().path != '/login'){
+                //     navigateTo('/login?' + (
+                //         encodeURI(useRoute().path != '/' ?
+                //             ('redirect_to=' + encodeURI(useRoute().fullPath)) : ''))
+                //     )
+                // }
             }
         },
         resetCookies() {

@@ -5,7 +5,7 @@ let ENV_DATA = (appEnv in Environments[appEnv]) ? Environments[appEnv] : process
 const THEME = ENV_DATA?.THEME || 'default'
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   dir: {
     middleware: `middlewares`,
     pages: `themes/${THEME}/pages`,
