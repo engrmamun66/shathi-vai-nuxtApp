@@ -3,9 +3,12 @@
 
     <header class="header" id="header">
       <nav class="navbar container">
+        <div class="d-flex justify-content-start align-items-center">
+        <img src="/img/logo.png" class="me-3" width="50" />
         <nuxt-link to="/" class="brand">
         This is my mosjid name
         </nuxt-link>
+        </div>
 
         <div class="menu" id="menu">
           <ul class="menu-list">            

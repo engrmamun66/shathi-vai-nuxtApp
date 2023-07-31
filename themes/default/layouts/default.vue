@@ -28,7 +28,6 @@ useHead({
     {type:'text/css', rel:'stylesheet', href:'//unpkg.com/boxicons@2.1.4/css/boxicons.min.css'},
     {type:'text/css', rel:'stylesheet', href:'//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'},
     {type:'text/css', rel:'stylesheet', href:'//unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'},
-    // {type:'text/css', rel: 'stylesheet', href:'/css/bootstrap.min.css'},
     {type:'text/css', rel: 'stylesheet', href:'/css/tooltip.css'},
     {type:'text/css', rel: 'stylesheet', href:'/css/color/light.css'},
     {type:'text/css', rel: 'stylesheet', href:'/css/common.css'},
