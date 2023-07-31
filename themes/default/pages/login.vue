@@ -1,5 +1,5 @@
 <template>
-    <div class="h h-100">
+    <div class="wrapper">
         <div class="h-75 d-flex justify-content-center align-items-center">
             <div>
                 <h1 class="text-center">
@@ -14,11 +14,10 @@
                         <label for="password">Password</label>
                         <input type="password" name="password" placeholder="password">
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <a class="text-center">For</a>
-                        <a class="text-center">New Registration</a>
+                    <div class="d-flex justify-content-center">
+                        <a class="text-center"> <i class="las la-link"></i> Registration as admin</a>
                     </div>
-                    <button type="submit">Login</button>
+                    <button type="button">Login</button>
                 </form>
             </div>
         </div>
@@ -30,8 +29,8 @@
 
 
 <style scoped>
-.wraper{
-    align-items: center;
+.wrapper{
+    height: 100vh;
 }
 
 h1 {
@@ -97,16 +96,26 @@ button:hover {
   background: #55D3AC;
 }
 
-@media(max-width: 458px) {
-  
-  body {
-    margin: 0 18px;
-  }
+@media(max-width: 458px) { 
   
   form {
     border: none;
     box-shadow: none;
     padding: 20px 0;
+  }
+  form a
+  {
+    color: #58585a;
+    text-decoration: none;
+    padding: 2px 12px;
+    font-size: 14px;
+  }
+  form a i
+  {
+    color: #58585a;
+    text-decoration: none;
+    padding: 2px 5px;
+    font-size: 14px;
   }
 
 }
