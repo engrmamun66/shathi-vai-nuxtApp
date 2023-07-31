@@ -1,37 +1,51 @@
 <template>
   <div class="position-relative">
-    <h1>This is a name</h1>  
-  </div>
+
+    <header class="header" id="header">
+      <nav class="navbar container">
+        <a href="./index.html" class="brand">This is my mosjid name</a>
+        <div class="menu" id="menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="#" class="menu-link is-active">
+                <i class="menu-icon ion-md-home"></i>
+                <span class="menu-name">Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-search"></i>
+                <span class="menu-name">Search</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-cart"></i>
+                <span class="menu-name">Cart</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-heart"></i>
+                <span class="menu-name">Favorite</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <i class="menu-icon ion-md-contact"></i>
+                <span class="menu-name">Account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
+</div>
 
 </template>
 
 <script setup>
-definePageMeta({
-  keepalive: false,
-  middleware: ["auth"],
-  key: (route) => route.fullPath,
-});
-useHead({
-  titleTemplate: '%s | Home',
-});
-
-onMounted(() => {
-  setTimeout(()=>{
-    const menuLinks = document.querySelectorAll(".menu-link");
-
-    menuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        menuLinks.forEach((link) => {
-          link.classList.remove("is-active");
-        });
-        link.classList.add("is-active");
-      });
-    });
-
-
-  },1000)
-})
-
 
 </script>
 <style scoped>
@@ -67,20 +81,6 @@ onMounted(() => {
   text-rendering: optimizeLegibility;
 }
 
-html {
-  font-size: 100%;
-  box-sizing: inherit;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--color-black);
-  background: var(--color-white);
-}
 
 a,
 button {
@@ -112,11 +112,12 @@ video {
 
 .brand {
   font-family: inherit;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
   color: var(--color-teal-800);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .header {
@@ -135,6 +136,7 @@ video {
   width: 100%;
   height: 4rem;
   margin: 0 auto;
+  background-color: #e7e7e7c2;
 }
 
 .menu {
@@ -167,7 +169,7 @@ video {
 }
 .menu-link.is-active {
   position: relative;
-  color: var(--color-teal-800);
+  color: hsl(162, 88%, 30%);
   transition: all 0.35s ease;
 }
 .menu-icon {

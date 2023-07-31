@@ -1,7 +1,14 @@
 <template> 
     <div class="softpro-app">
-      <MyCanvas use="background"></MyCanvas>
-      <slot />
+      <div v-if="useRoute().path=='/login'">
+        <slot />
+      </div>
+      <div v-else>
+        <Menu />
+        <div style="margin-top:4rem">
+          <slot />
+        </div>
+      </div>
     </div>
 </template>
 
