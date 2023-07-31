@@ -1,6 +1,6 @@
 <template> 
     <div class="softpro-app">
-      <div v-if="useRoute().path=='/login'">
+      <div v-if="useRoute().path=='/login' || useRoute().path=='/register'">
         <slot />
       </div>
       <div v-else>

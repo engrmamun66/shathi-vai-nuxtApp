@@ -148,10 +148,11 @@ video {
   width: 100%;
   height: 3.5rem;
   padding: 0 1rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   background: var(--color-white);
-  box-shadow:  0px -3px 6px #eae7e7;
+  box-shadow: 0px -3px 6px #a2a2a233;
+  border-top: 1px solid #c8c8c8;
 }
 .menu-list {
   display: flex;

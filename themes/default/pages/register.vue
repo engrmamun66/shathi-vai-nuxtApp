@@ -2,6 +2,7 @@
     <div class="wrapper">
         <div class="h-100 d-flex justify-content-center align-items-center">
             <div>
+              
                 <div class="text-center">
                   <img src="/img/logo.png" width="100" />
                 </div>
@@ -10,17 +11,26 @@
                 </div>
                 <form>
                     <div class="row">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" autocomplete="off" placeholder="email">
+                        <label for="email">Select Masjid</label>
+                        <select >
+                          <option value="">--Select--</option>
+                          <option value="">Masjid 1</option>
+                          <option value="">Masjid 2</option>
+                          <option value="">Masjid 3</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label for="email">Username or Email</label>
+                        <input type="email" name="text" autocomplete="off" placeholder="Username/email">
                     </div>
                     <div class="row">
                         <label for="password">Password</label>
                         <input type="password" name="password" placeholder="password">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <a class="text-center" @click="navigateTo('/register')"> <i class="las la-link"></i> Registration as admin</a>
+                        <a  @click="navigateTo('/login')" class="text-center cp"> <i class="las la-sign-in-alt"></i> Login Now</a>
                     </div>
-                    <button type="button">Login</button>
+                    <button type="button">Registration</button>
                 </form>
             </div>
         </div>
@@ -36,10 +46,9 @@
     height: 100vh;
 }
 
-
 form {
   background: #fff;
-  max-width: 360px;
+  max-width: 460px;
   width: 100%;
   padding: 58px 44px;
   border: 1px solid #e1e2f0;
@@ -47,11 +56,13 @@ form {
   box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
   transition: all 0.3s ease;
 }
+
 form a {
 cursor: pointer;
 }
 
 .row {
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -63,21 +74,32 @@ cursor: pointer;
   padding-left: 0px;
 }
 
-.row input {
+.row input,
+.row select
+ {
   flex: 1;
   padding: 13px;
   border: 1px solid #d6d8e6;
   border-radius: 4px;
   font-size: 16px;
   transition: all 0.2s ease-out;
+  color: #58585a;
+}
+.row select option
+ {
+  color: #58585a;
 }
 
-.row input:focus {
+.row input:focus,
+.row select:focus
+ {
   outline: none;
   box-shadow: inset 2px 2px 5px 0 rgba(42, 45, 48, 0.12);
 }
 
-.row input::placeholder {
+.row input::placeholder,
+.row select::placeholder
+ {
   color: #C8CDDF;
 }
 
