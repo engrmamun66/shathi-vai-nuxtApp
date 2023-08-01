@@ -9,3 +9,10 @@ npm start
 
 
 # Documentation:: https://futurestud.io/tutorials/pm2-create-multiple-environments-in-process-file-json-js-yaml
+# Migration DB and tables
+# Note: config\config.json for sequelize init
+# Documentation:: https://sequelize.org/docs/v6/other-topics/migrations/#installing-the-cli
+npx sequelize-cli migration:generate --name create_users_table
+npx sequelize-cli db:migrate
+npx sequelize-cli db:migrate:undo
+npx sequelize-cli db:migrate:undo:all
