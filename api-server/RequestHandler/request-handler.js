@@ -4,4 +4,9 @@ module.exports = function asd(app){
         // console.log([req.headers])
         res.send({query, body, headers});
     })
+    app.get('/', (req, res) => {
+        let {query} = req
+        // console.log([req.headers])
+        res.send({query});
+    })
 }

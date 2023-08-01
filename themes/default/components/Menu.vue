@@ -206,6 +206,9 @@ video {
     box-shadow: 0px -3px 6px #a2a2a233;
     border-top: 1px solid #c8c8c8;
   }
+  .navbar{
+    box-shadow: 0px 1px 8px #8d8d8d;
+  }
 }
 @media only screen and (min-width: 360px) {
   .menu-name {
